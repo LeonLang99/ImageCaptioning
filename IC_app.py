@@ -4,7 +4,7 @@ import numpy as np
 
 st.title('Uber pickups in NYC')
 
-streamlit run IC_app.py
+
 
 
 text1="hello world"
