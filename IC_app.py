@@ -4,6 +4,9 @@ import numpy as np
 from datasets import load_dataset
 dataset = load_dataset("laion/laion2B-multi")
 
+y=1
+
+
 st.write("""
 # Image Captioning Group 13
 
@@ -21,12 +24,14 @@ BoxOptions= st.selectbox("Choose", ("load sample table", "view rdm item", "redir
 
 def selectDataset(boxOptions):
   if BoxOptions=="load sample table":
-    return 42
+    b=y*100
+    return b
 # squad_dataset = load_dataset("squad")
   elif BoxOptions=="view rdm item":
-  return 1
+    a=y*5
+  return a
   elif BoxOptions=="redirect":
   "Ready to roll": ![alt](www.google.de)
     else 
-    return 0
+    return y
     
