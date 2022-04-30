@@ -30,8 +30,8 @@ def selectDataset(boxOptions):
   elif BoxOptions=="view rdm item":
     a=y*5
   return a
-  elif BoxOptions=="redirect":
-  "Ready to roll": ![alt](www.google.de)
+#  elif BoxOptions=="redirect":
+#  "Ready to roll": ![alt](www.google.de)
     else 
     return y
     
