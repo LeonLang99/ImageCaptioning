@@ -23,7 +23,9 @@ def selectDataset(boxOptions):
   if BoxOptions=="load sample table":
 # squad_dataset = load_dataset("squad")
   elif BoxOptions=="view rdm item"
-  
+  return 1
   elif BoxOptions=="redirect"
   "Ready to roll": ![alt](www.google.de)
+    else 
+    return 0
     
