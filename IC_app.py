@@ -10,3 +10,8 @@ st.text('describe an image with one or more natural language sentences. To gener
 st.text('textual description of images we will be using Deep Learning Techniques.')
 
 
+from datasets import load_dataset
+
+dataset = load_dataset("laion/laion2B-multi")
+
+
