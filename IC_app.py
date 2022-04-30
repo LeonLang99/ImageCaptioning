@@ -32,7 +32,5 @@ def selectDataset(boxOptions):
   return a
 #  elif BoxOptions=="redirect":
 #  "Ready to roll": ![alt](www.google.de)
-  else:
-    y=y+1
-  return y
+
     
