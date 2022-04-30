@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from datasets import load_dataset
-
+dataset = load_dataset("laion/laion2B-multi")
 
 st.write("""
 # Image Captioning Group 13
@@ -21,7 +21,7 @@ BoxOptions= st.selectbox("Choose", ("load sample table", "view rdm item", "redir
 
 def selectDataset(boxOptions):
   if BoxOptions=="load sample table":
-  dataset = load_dataset("laion/laion2B-multi")
+ squad_dataset = load_dataset("squad")
   elif BoxOptions=="view rdm item"
   
   elif BoxOptions=="redirect"
