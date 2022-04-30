@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+from datasets import load_dataset
 
 
 st.write("""
@@ -14,4 +15,15 @@ be using Neural Network and Deep Learning Techniques.
 
 """)
 
+#Different function based on box
 
+BoxOptions= st.selectbox("Choose", ("load sample table", "view rdm item", "redirect"))
+
+def selectDataset(boxOptions):
+  if BoxOptions=="load sample table":
+  dataset = load_dataset("laion/laion2B-multi")
+  elif BoxOptions=="view rdm item"
+  
+  elif BoxOptions=="redirect"
+  "Ready to roll": ![alt](www.google.de)
+    
