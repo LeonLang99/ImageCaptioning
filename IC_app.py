@@ -2,8 +2,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from datasets import load_dataset
-dataset = load_dataset("//huggingface.co/datasets/laion/laion2B-multi")
+#from datasets import load_dataset
+#dataset = load_dataset("//huggingface.co/datasets/laion/laion2B-multi")
 
 y=1
 
