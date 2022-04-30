@@ -21,6 +21,7 @@ BoxOptions= st.selectbox("Choose", ("load sample table", "view rdm item", "redir
 
 def selectDataset(boxOptions):
   if BoxOptions=="load sample table":
+    return 42
 # squad_dataset = load_dataset("squad")
   elif BoxOptions=="view rdm item"
   return 1
