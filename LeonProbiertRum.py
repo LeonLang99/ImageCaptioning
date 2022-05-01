@@ -9,7 +9,7 @@ import json
 
 st.write("""# hallo Leon""")
 routes = {}
-df = pd.read_csv('Mappe1.csv')
+df = pd.read_csv('https://github.com/LeonLang99/ImageCaptioning/blob/main/Mappe1.csv')
 
 
 # iterate over the rows and download the images
