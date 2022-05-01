@@ -9,14 +9,14 @@ import json
 
 st.write("""# hallo Leon""")
 routes = {}
-df = pd.read_csv('index_file.csv')
+df = pd.read_csv('Mappe1.csv')
 
 
 # iterate over the rows and download the images
 for index, row in df.iterrows():
     # get the image from the url
     http = urllib3.PoolManager()
-    r = http.request('GET', row['url'])
+    r = http.request('GET', row['//huggingface.co/datasets/laion/laion2B-multi'])
     img_data = r.data
     
     # save data to image file and row['TEXT'] to json file
