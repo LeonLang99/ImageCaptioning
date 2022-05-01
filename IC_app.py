@@ -2,6 +2,11 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+
+import urllib3
+from PIL import Image
+import io
+import json
 #from datasets import load_dataset
 #dataset = load_dataset("//huggingface.co/datasets/laion/laion2B-multi")
 
@@ -21,7 +26,7 @@ be using Neural Network and Deep Learning Techniques.
 
 #Different function based on box
 
-BoxOptions= st.selectbox("Choose", ("load sample table", "view rdm item", "redirect"))
+BoxOptions= st.selectbox("Choose:", ("load sample table", "view rdm item", "redirect"))
 
 def selectDataset(boxOptions):
   if BoxOptions=="load sample table":
@@ -36,11 +41,7 @@ def selectDataset(boxOptions):
 
 
 #copied text from https://app.gitbook.com/o/-MIdja2NhrQfKSnOsaVz/s/rdKhridiL1e82zkcHWLY/data-sets/laion-dataset#example-download
-import urllib3
-import pandas as pd
-from PIL import Image
-import io
-import json
+
 
 
 routes = {}
