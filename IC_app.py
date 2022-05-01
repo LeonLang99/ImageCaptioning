@@ -7,8 +7,8 @@ import urllib3
 from PIL import Image
 import io
 import json
-#from datasets import load_dataset
-#dataset = load_dataset("//huggingface.co/datasets/laion/laion2B-multi")
+from datasets import load_dataset
+dataset = load_dataset("//huggingface.co/datasets/laion/laion2B-multi")
 
 y=1
 
@@ -65,3 +65,4 @@ for index, row in df.iterrows():
     routes[filename] = text
 
 json.dump(routes, open("routes.json", "w"))
+*/
