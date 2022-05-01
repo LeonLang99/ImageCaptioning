@@ -51,7 +51,7 @@ df = pd.read_csv('index_file.csv')
 for index, row in df.iterrows():
     # get the image from the url
     http = urllib3.PoolManager()
-    r = http.request('GET', row['url'])
+    r = http.request('GET', row['https://huggingface.co/datasets/laion/laion2B-multi'])
     img_data = r.data
     
     # save data to image file and row['TEXT'] to json file
