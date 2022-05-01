@@ -26,11 +26,11 @@ BoxOptions= st.selectbox("Choose", ("load sample table", "view rdm item", "redir
 def selectDataset(boxOptions):
   if BoxOptions=="load sample table":
     b=y*100
-    return b
+    return st.text(b)
 # squad_dataset = load_dataset("squad")
   elif BoxOptions=="view rdm item":
     a=y*5
-  return a
+  return st.text(a)
 #  elif BoxOptions=="redirect":
 #  "Ready to roll": ![alt](www.google.de)
 
