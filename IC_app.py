@@ -25,6 +25,7 @@ with col3:
 
 with st.expander("Random Picture"):
   st.write("Please press the following Button to get a random picture from our dataset.")
+  
   if st.button("Get Random Image")
     get_rdm_image()
   
