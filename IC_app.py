@@ -4,10 +4,10 @@ import numpy as np
 
 
 
-  
-  def load_data_csv():
+ @st.cache
+ def load_data_csv():
     data = pd.read_csv("https://github.com/LeonLang99/ImageCaptioning/blob/main/Mappe1.csv")
-    return data
+   return data
   
   data=load_data_csv()
   
