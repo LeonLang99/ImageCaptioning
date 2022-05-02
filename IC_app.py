@@ -38,17 +38,17 @@ with st.expander("Random Picture"):
   @st.cache
   def load_data_csv():
     data = pd.read_csv("https://github.com/LeonLang99/ImageCaptioning/blob/main/Mappe1.csv")
-   return data
+    return data
   
   data=load_data_csv()
 
- def get_rdm_image
+  def get_rdm_image():
     row = rdm.randint(0,67)
     url = data.iloc[row]["URL"]
     st.image(url)
     st.write(data.iloc[row]["TEXT"])
   
-  if st.button("Get Random Image")
+  if st.button("Get Random Image"):
     get_rdm_image()
   
 
