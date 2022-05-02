@@ -4,18 +4,7 @@ import numpy as np
 
 
 
- @st.cache
- def load_data_csv():
-    data = pd.read_csv("https://github.com/LeonLang99/ImageCaptioning/blob/main/Mappe1.csv")
-   return data
-  
-  data=load_data_csv()
-  
-  def get_rdm_image
-    row = random.randint(0,67)
-    url = data.iloc[row]["URL"]
-    st.image(url)
-    st.write(data.iloc[row]["TEXT"])
+
   
   
 st.title('Image Captioning Group 13')
@@ -42,6 +31,19 @@ with col3:
 
 with st.expander("Random Picture"):
   st.write("Please press the following Button to get a random picture from our dataset.")
+  
+ @st.cache
+ def load_data_csv():
+    data = pd.read_csv("https://github.com/LeonLang99/ImageCaptioning/blob/main/Mappe1.csv")
+   return data
+  
+  data=load_data_csv()
+  
+  def get_rdm_image
+    row = random.randint(0,67)
+    url = data.iloc[row]["URL"]
+    st.image(url)
+    st.write(data.iloc[row]["TEXT"])
   
   if st.button("Get Random Image")
     get_rdm_image()
