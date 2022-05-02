@@ -1,4 +1,5 @@
 import streamlit as st
+import random as rdm
 import pandas as pd
 import numpy as np
 
@@ -38,9 +39,9 @@ with st.expander("Random Picture"):
    return data
   
   data=load_data_csv()
-  
-  def get_rdm_image
-    row = random.randint(0,67)
+
+ def get_rdm_image
+    row = rdm.randint(0,67)
     url = data.iloc[row]["URL"]
     st.image(url)
     st.write(data.iloc[row]["TEXT"])
