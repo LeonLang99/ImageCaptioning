@@ -33,8 +33,10 @@ with col3:
 with st.expander("Random Picture"):
   st.write("Please press the following Button to get a random picture from our dataset.")
   
- @st.cache
- def load_data_csv():
+  
+  
+  @st.cache
+  def load_data_csv():
     data = pd.read_csv("https://github.com/LeonLang99/ImageCaptioning/blob/main/Mappe1.csv")
    return data
   
