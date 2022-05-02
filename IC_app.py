@@ -1,6 +1,23 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+
+
+
+  
+  def load_data_csv():
+    data = pd.read_csv("https://github.com/LeonLang99/ImageCaptioning/blob/main/Mappe1.csv")
+    return data
+  
+  data=load_data_csv()
+  
+  def get_rdm_image
+    row = random.randint(0,67)
+    url = data.iloc[row]["URL"]
+    st.image(url)
+    st.write(data.iloc[row]["TEXT"])
+  
+  
 st.title('Image Captioning Group 13')
 
 with st.expander("The Team"):
@@ -29,16 +46,4 @@ with st.expander("Random Picture"):
   if st.button("Get Random Image")
     get_rdm_image()
   
-  
-  def load_data_csv():
-    data = pd.read_csv("https://github.com/LeonLang99/ImageCaptioning/blob/main/Mappe1.csv")
-    return data
-  
-  data=load_data_csv()
-  
-  def get_rdm_image
-    row = random.randint(0,67)
-    url = data.iloc[row]["URL"]
-    st.image(url)
-    st.write(data.iloc[row]["TEXT"])
-  
+
