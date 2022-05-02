@@ -22,3 +22,22 @@ with col2:
 with col3:
     st.header("Girl in a white dress")
     st.image("https://static2.yan.vn/YanNews/2167221/202004/co-luc-na-trat-duoc-khen-nuc-no-vi-qua-de-thuong-nho-tang-can-93c37ecb.jpeg")
+
+with st.expander("Random Picture"):
+  st.write("Please press the following Button to get a random picture from our dataset.")
+  if st.button("Get Random Image")
+    get_rdm_image()
+  
+  
+  def load_data_csv():
+    data = pd.read_csv("https://github.com/LeonLang99/ImageCaptioning/blob/main/Mappe1.csv")
+    return data
+  
+  data=load_data_csv()
+  
+  def get_rdm_image
+    row = random.randint(0,67)
+    url = data.iloc[row]["URL"]
+    st.image(url)
+    st.write(data.iloc[row]["TEXT"])
+  
