@@ -34,9 +34,8 @@ with st.expander("Random Picture"):
   st.write("Please press the following Button to get a random picture from our dataset.")
   
   
-  
 with st.expander("Our vision..."):    
-     st.write("# What are our project objectives?  
+     st.write(""# What are our project objectives?  
 "Our main goal is our app to automatically generate captions, also known as textual descriptions, for random images. The dataset will be in the form [image → captions]. It will consist of input images and their corresponding output captions which have to be as precise as possible, but also short and concise. 
 "The caption generator will involve the dual techniques from computer vision - to first understand the content of the image, and a language model from the field of natural language processing to turn the understanding of the image into words in the right order and correct structure.
 "# Which problem do we want to solve?
@@ -44,4 +43,4 @@ with st.expander("Our vision..."):
 "# About our data…
 "Our dataset consists of X images which are randomly sorted. For the training we will not use the whole data set, because it has an enormous storage capacity (~ 240TB of data).
 "Therefore, in advantage of time and costs we will use between 500-1000 pictures to train our data. 
-")
+"")
