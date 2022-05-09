@@ -35,7 +35,7 @@ with st.expander("Random Picture"):
   
   
   
- with st.expander("Our vision..."):    
+with st.expander("Our vision..."):    
      st.write(""# What are our project objectives?
               
 Our main goal is our app to automatically generate captions, also known as textual descriptions, for random images. The dataset will be in the form [image → captions]. It will consist of input images and their corresponding output captions which have to be as precise as possible, but also short and concise. 
