@@ -35,20 +35,15 @@ with st.expander("Random Picture"):
   
   
   
-  @st.cache
-  def load_data_csv():
-    data = pd.read_csv("https://github.com/LeonLang99/ImageCaptioning/blob/main/Mappe1.csv")
-    return data
-  
-  data=load_data_csv()
+ with st.expander("Our vision..."):    
+     st.write(""# What are our project objectives?
+              
+Our main goal is our app to automatically generate captions, also known as textual descriptions, for random images. The dataset will be in the form [image → captions]. It will consist of input images and their corresponding output captions which have to be as precise as possible, but also short and concise. 
+The caption generator will involve the dual techniques from computer vision - to first understand the content of the image, and a language model from the field of natural language processing to turn the understanding of the image into words in the right order and correct structure.
 
-  def get_rdm_image():
-    row = rdm.randint(0,67)
-    url = data.iloc[row]["URL"]
-    st.image(url)
-    st.write(data.iloc[row]["TEXT"])
-  
-  if st.button("Get Random Image"):
-    get_rdm_image()
-  
-
+# Which problem do we want to solve?
+Image captioning can be used in lots of virtual domains such as for virtual assistants, picture recommendations, for image indexing, for social media, but also to explore the world around you, using only your phone's camera which scans a real object and tell someone what kind of object that is (for example Google Lens).
+# About our data…
+Our dataset consists of X images which are randomly sorted. For the training we will not use the whole data set, because it has an enormous storage capacity (~ 240TB of data).
+Therefore, in advantage of time and costs we will use between 500-1000 pictures to train our data. 
+"")
