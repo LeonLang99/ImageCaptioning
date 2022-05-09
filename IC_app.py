@@ -32,7 +32,7 @@ with col3:
 
 with st.expander("Random Picture"):
   st.write("Please press the following Button to get a random picture from our dataset.")
-  
+  st.button("random pic")
 with st.expander("Our vision..."):    
    st.subheader("What are our project objectives?")
    st.write("Our main goal is our app to automatically generate captions, also known as textual descriptions, for random images. The dataset will be in the form [image → captions]. It will consist of input images and their corresponding output captions which have to be as precise as possible, but also short and concise. The caption generator will involve the dual techniques from computer vision - to first understand the content of the image, and a language model from the field of natural language processing to turn the understanding of the image into words in the right order and correct structure.")
