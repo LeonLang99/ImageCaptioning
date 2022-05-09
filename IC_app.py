@@ -4,10 +4,6 @@ import pandas as pd
 import numpy as np
 
 
-
-
-  
-  
 st.title('Image Captioning Group 13')
 
 with st.expander("The Team"):
