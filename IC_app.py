@@ -2,7 +2,10 @@ import streamlit as st
 import random as rdm
 import pandas as pd
 import numpy as np
+import os
 
+git lfs install
+git clone https://huggingface.co/datasets/laion/laion2B-multi
 
 st.title('Image Captioning Group 13')
 
@@ -37,6 +40,4 @@ with st.expander("Our vision..."):
    st.subheader("About our data…")
    st.write("Our dataset consists of X images which are randomly sorted. For the training we will not use the whole data set, because it has an enormous storage capacity (~ 240TB of data).Therefore, in advantage of time and costs we will use between 500-1000 pictures to train our data. We will delimit our data set to the topic 'public and urban ways of travel', as we think this is a suitable domain to start with when training your data.")
 
- from datasets import load_dataset
 
-dataset = load_dataset("laion/laion2B-multi")
