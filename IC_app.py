@@ -4,8 +4,26 @@ import pandas as pd
 import numpy as np
 
 
+@st.cache
+def load_data():
+    df = pd.read_csv("https://github.com/LeonLang99/ImageCaptioning/blob/840c04af247b2de7e068b8da38888812d82adb66/carSubset.json")
+    return df
 
 
+data_load_state = st.subheader("Loading data...")
+df = load_data()
+
+data_load_state.subheader("Comparison generated caption vs. real caption:")
+
+
+def get_image():
+    column = random.randint(0, 999999)
+    url = df.iloc[column]["URL"]
+    st.image(url)
+    st.write("real caption:")
+    st.write(df.iloc[column]["TEXT"])
+    st.write("URL:")
+    st.write(url)
 
 
 st.title('Image Captioning Group 13')
@@ -42,25 +60,3 @@ with st.expander("Our vision..."):
    st.write("Image captioning can be used in lots of virtual domains such as for virtual assistants, picture recommendations, for image indexing, for social media, but also to explore the world around you, using only your phone's camera which scans a real object and tell someone what kind of object that is (for example Google Lens).")
    st.subheader("About our data…")
    st.write("Our dataset consists of X images which are randomly sorted. For the training we will not use the whole data set, because it has an enormous storage capacity (~ 240TB of data).Therefore, in advantage of time and costs we will use between 500-1000 pictures to train our data. We will delimit our data set to the topic 'public and urban ways of travel', as we think this is a suitable domain to start with when training your data.")
-
-
-@st.cache
-def load_data():
-    df = pd.read_csv("https://github.com/LeonLang99/ImageCaptioning/blob/840c04af247b2de7e068b8da38888812d82adb66/carSubset.json")
-    return df
-
-
-data_load_state = st.subheader("Loading data...")
-df = load_data()
-
-data_load_state.subheader("Comparison generated caption vs. real caption:")
-
-
-def get_image():
-    column = random.randint(0, 999999)
-    url = df.iloc[column]["URL"]
-    st.image(url)
-    st.write("real caption:")
-    st.write(df.iloc[column]["TEXT"])
-    st.write("URL:")
-    st.write(url)
