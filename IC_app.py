@@ -9,16 +9,28 @@ import io
 import json
 
 
-routes = {}
-df = pd.read_csv('carSubset.csv')
+@st.cache
+def load_data():
+    df = pd.read_csv("carSubset.csv")
+    return df
 
 
-# iterate over the rows and download the images
-for index, row in df.iterrows():
-    # get the image from the url
-    http = urllib3.PoolManager()
-    r = http.request('GET', row['url'])
-    img_data = r.data
+data_load_state = st.subheader("Loading data...")
+df = load_data()
+
+data_load_state.subheader("Comparison generated caption vs. real caption:")
+
+
+def get_image():
+    column = random.randint(0, 999999)
+    url = df.iloc[column]["URL"]
+    st.image(url)
+    st.write("real caption:")
+    st.write(df.iloc[column]["TEXT"])
+    st.write("URL:")
+    st.write(url)
+
+
 
 st.title('Image Captioning Group 13')
 
@@ -45,6 +57,8 @@ with col3:
 with st.expander("Random Picture"):
   st.write("Please press the following Button to get a random picture from our dataset.")
   st.button("random pic")
+  get_image()
+
 with st.expander("Our vision..."):    
    st.subheader("What are our project objectives?")
    st.write("Our main goal is our app to automatically generate captions, also known as textual descriptions, for random images. The dataset will be in the form [image → captions]. It will consist of input images and their corresponding output captions which have to be as precise as possible, but also short and concise. The caption generator will involve the dual techniques from computer vision - to first understand the content of the image, and a language model from the field of natural language processing to turn the understanding of the image into words in the right order and correct structure.")
