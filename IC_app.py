@@ -4,26 +4,7 @@ import pandas as pd
 import numpy as np
 
 
-@st.cache
-def load_data():
-    df = pd.read_csv("https://github.com/LeonLang99/ImageCaptioning/blob/840c04af247b2de7e068b8da38888812d82adb66/carSubset.json")
-    return df
 
-
-data_load_state = st.subheader("Loading data...")
-df = load_data()
-
-data_load_state.subheader("Comparison generated caption vs. real caption:")
-
-
-def get_image():
-    column = random.randint(0, 999999)
-    url = df.iloc[column]["URL"]
-    st.image(url)
-    st.write("real caption:")
-    st.write(df.iloc[column]["TEXT"])
-    st.write("URL:")
-    st.write(url)
 
 
 st.title('Image Captioning Group 13')
@@ -48,6 +29,30 @@ with col3:
     st.header("Girl in a white dress")
     st.image("https://static2.yan.vn/YanNews/2167221/202004/co-luc-na-trat-duoc-khen-nuc-no-vi-qua-de-thuong-nho-tang-can-93c37ecb.jpeg")
 
+    
+    
+@st.cache
+def load_data():
+    df = pd.read_csv("https://github.com/LeonLang99/ImageCaptioning/blob/840c04af247b2de7e068b8da38888812d82adb66/carSubset.json")
+    return df
+
+
+    data_load_state = st.subheader("Loading data...")
+    df = load_data()
+
+    data_load_state.subheader("Comparison generated caption vs. real caption:")
+
+
+def get_image():
+    column = random.randint(0, 999999)
+    url = df.iloc[column]["URL"]
+    st.image(url)
+    st.write("real caption:")
+    st.write(df.iloc[column]["TEXT"])
+    st.write("URL:")
+    st.write(url)
+    
+    
 with st.expander("Random Picture"):
   st.write("Please press the following Button to get a random picture from our dataset.")
   st.button("random pic")
