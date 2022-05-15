@@ -10,7 +10,7 @@ import json
 
 
 routes = {}
-df = pd.read_csv('index_file.csv')
+df = pd.read_csv('carSubset.csv')
 
 
 # iterate over the rows and download the images
