@@ -11,7 +11,7 @@ import json
 
 @st.cache
 def load_data():
-    df = pd.read_csv("carSubset.csv")
+    df = pd.read_csv("https://github.com/LeonLang99/ImageCaptioning/blob/840c04af247b2de7e068b8da38888812d82adb66/carSubset.json")
     return df
 
 
