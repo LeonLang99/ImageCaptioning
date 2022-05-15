@@ -56,7 +56,7 @@ def get_image():
 with st.expander("Random Picture"):
   st.write("Please press the following Button to get a random picture from our dataset.")
   st.button("random pic")
-  get_image()
+    get_image()
 
 with st.expander("Our vision..."):    
    st.subheader("What are our project objectives?")
